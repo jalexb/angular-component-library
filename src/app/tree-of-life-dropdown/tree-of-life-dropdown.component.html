@@ -1,0 +1,11 @@
+<select [(ngModel)]="model" class="models-dropdown" name="tree of life" (change)="filterKingdoms()">
+  <option *ngFor="let model of models" [ngValue]="model">
+    {{model.title}}
+  </option>
+</select>
+
+<select [disabled]="model.title == null" [(ngModel)]="kingdom" class="phylum-dropdown" name="kingdom">
+  <option *ngFor="let kingdom of kingdoms" [ngValue]="kingdom">
+    {{kingdom.phylum}}
+  </option>
+</select>
